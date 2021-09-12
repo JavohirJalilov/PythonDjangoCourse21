@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +7,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>All Meetups</title>
+	<link rel="stylesheet" href="{% static 'meetups/styles/base.css' %}">
 </head>
 <body>
 	<h1>All Meetups</h1>
 	<p>Hello, World</p>
+	{% if show_meetups %}
+		{{ meetups.0.title }}
+	{% endif %}
 	
 </body>
 </html>
