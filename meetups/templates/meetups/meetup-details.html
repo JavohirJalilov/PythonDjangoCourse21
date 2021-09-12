@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>meetups_title</title>
+	<link rel="stylesheet" href="{% static 'meetups/styles/base.css' %}">
+	<link rel="stylesheet" href="{% static 'meetups/styles/meetup-detail.css' %}">
+</head>
+<body>
+	<main>
+		<article>
+			<img src="" alt="">
+
+			<section id="location"></section>
+			<h2>Uchrashuv joyi</h2>
+			<address>Bu uchrashuv shu yerda bo'lib o'tadi <span>JOYLASHUV</span>(ADDRESS).</address>
+		
+			<section id="details">
+				<h2>Uchrashuv nima haqida?</h2>
+				<p>meetup_description</p>
+				<footer>
+					<p>Batafsil ma'lumotkerakmi? Please <a href="">tashkilotchiga ulaning</a>(but don't spam us.)</p>
+				</footer>
+			</section>
+			<section id="registration">
+				<h2>Join Us</h2>
+				FORMS
+			</section>
+		</article>
+	</main>
+</body>
+</html>
