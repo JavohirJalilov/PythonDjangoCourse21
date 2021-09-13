@@ -11,9 +11,14 @@ def index(request):
 	})
 
 def meetups_details(request,meetup_slug):
-	print(meetup_slug)
-	selected_meetup = Metup.objects.get(slug=meetup_slug)
-	return render(request,'meetups/meetup-details.html',{
-		'meetup_title':selected_meetup.title,
-		'meetup_description':selected_meetup.description
-	})
+	try:
+		selected_meetup = Metup.objects.get(slug=meetup_slug)
+		return render(request,'meetups/meetup-details.html',{
+			'meetup_title':selected_meetup.title,
+			"meetup_fuond":False,
+			'meetup_description':selected_meetup.description
+		})
+	except Exception as exc:
+		return render(request, 'meetups/meetup-details.html', {
+			"meetup_fuond":False
+		})
