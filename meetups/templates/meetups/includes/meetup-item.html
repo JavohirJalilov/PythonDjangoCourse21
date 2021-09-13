@@ -6,11 +6,11 @@
 			</div>
 			<div>
 				<h3>{{ meetups_item.title }}</h3>
-				<address>{{ meetups_item.address }}</address>
+				<address>{{ location }}</address>
 			</div>
 		</div>
 		<div class="meetup-actions">
-			<a href="/meetups/{{ meetups_item.slug }}" class="btn">More Details</a>
+			<a href="{% url 'meetup-detail' slug %}" class="btn">More Details</a>
 
 		</div>
 	</article>

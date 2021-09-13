@@ -22,7 +22,8 @@ O'zingizga foydali uchrashuvni toping!
 			<h2>Upcoming Meetups</h2>
 		<ol>
 			{% for meetups_item in meetups %}
-				{% include 'meetups/includes/meetup-item.html' %}
+				<!-- {{ meetup_item }} -->
+				{% include 'meetups/includes/meetup-item.html' slug=meetups_item.slug %}
 			{% endfor %}
 		</ol>
 		</section>
